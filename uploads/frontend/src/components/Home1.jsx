@@ -15,7 +15,7 @@ const Home1 = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
+        const response = await axios.get('https://uploads-backend.onrender.com/api/blogs');
         setBlogs(response.data);
         // console.log(response.data);
       } catch (error) {

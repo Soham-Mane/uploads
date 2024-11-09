@@ -9,7 +9,7 @@ const TrendingNews = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
+                const response = await axios.get('https://uploads-backend.onrender.com/api/blogs');
                 setBlogs(response.data);
             } catch (error) {
                 console.error('Error fetching blogs:', error);
@@ -42,7 +42,7 @@ const TrendingNews = () => {
                         <div className="w-28 h-20 bg-gray-200 flex-shrink-0 rounded-md overflow-hidden">
                             {blog.imagePath ? (
                                 <img
-                                    src={`https://uploads-backend.onrender.com//${blog.imagePath}`}
+                                    src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
                                     alt={blog.title}
                                     className="w-full h-full object-cover"
                                 />

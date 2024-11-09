@@ -49,7 +49,7 @@ const BlogForm = ({placeholder}) => {
     formDataToSubmit.append('image', formData.image);
 
     try {
-      await axios.post('https://uploads-backend.onrender.com//api/blogs', formDataToSubmit, {
+      await axios.post('https://uploads-backend.onrender.com/api/blogs', formDataToSubmit, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

@@ -17,7 +17,7 @@ const ExcelUpload = () => {
     console.log('File name:', file?.name);
 
     try {
-      const res = await axios.post('https://uploads-backend.onrender.com//api/upload', formData, {
+      const res = await axios.post('https://uploads-backend.onrender.com/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -32,7 +32,7 @@ const ExcelUpload = () => {
 
   const handleDownload = async () => {
     try {
-      const res = await axios.get(`https://uploads-backend.onrender.com//api/file/${filename}`, {
+      const res = await axios.get(`https://uploads-backend.onrender.com/api/file/${filename}`, {
         responseType: 'blob', // Ensure that the response is treated as a file
       });
       const url = window.URL.createObjectURL(new Blob([res.data]));

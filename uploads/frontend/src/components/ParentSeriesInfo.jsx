@@ -8,7 +8,7 @@ const ParentSeriesInfo = () => {
   useEffect(() => {
     const fetchOverallSeries = async () => {
       try {
-        const response = await axios.get('https://uploads-backend.onrender.com//api/overall-series');  // Fetch overall series data from the backend
+        const response = await axios.get('https://uploads-backend.onrender.com/api/overall-series');  // Fetch overall series data from the backend
         setOverallSeries(response.data);  // Set the overall series data to state
       } catch (error) {
         console.error('Error fetching overall series:', error);

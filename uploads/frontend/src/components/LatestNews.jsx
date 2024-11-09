@@ -11,7 +11,7 @@ const LatestNews = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
+                const response = await axios.get('https://uploads-backend.onrender.com/api/blogs');
                 setBlogs(response.data);
             } catch {
                 console.error('Error fetching data');
@@ -45,7 +45,7 @@ const LatestNews = () => {
                 <div className="w-full h-2/3 bg-gray-300 rounded-md">
                     {blog.imagePath && (
                         <img
-                            src={`https://uploads-backend.onrender.com//${blog.imagePath}`}
+                            src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
                             alt={blog.title}
                             className="w-full h-full object-cover"
                         />
