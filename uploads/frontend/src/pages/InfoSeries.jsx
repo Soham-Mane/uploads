@@ -15,7 +15,7 @@ const AddSeries = () => {
 
   const fetchSeries = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/overall-series');
+      const res = await axios.get('https://uploads-backend.onrender.com//api/overall-series');
       setSeriesList(res.data);
     } catch (error) {
       console.error('Error fetching series:', error);
@@ -24,7 +24,7 @@ const AddSeries = () => {
 
   const handleAddSeries = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/overall-series', {
+      const res = await axios.post('https://uploads-backend.onrender.com//api/overall-series', {
         name: seriesName,
         overallId: overallId, // Changed from offset to overallId
       });

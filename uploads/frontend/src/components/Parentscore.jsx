@@ -8,7 +8,7 @@ const ParentScore = () => {
   useEffect(() => {
     const fetchSeries = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/series');
+        const response = await axios.get('https://uploads-backend.onrender.com//api/series');
         if (response && response.data && Array.isArray(response.data)) {
           const offsetIds = response.data.map(series => series.offset);
           console.log('Offset IDs:', offsetIds);

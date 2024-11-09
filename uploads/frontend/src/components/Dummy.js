@@ -24,7 +24,7 @@ const CsvUpload = () => {
 
     try {
       // Post the CSV file to the backend
-      const response = await axios.post('http://localhost:5000/upload-csv', formData, {
+      const response = await axios.post('https://uploads-backend.onrender.com//upload-csv', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

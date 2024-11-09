@@ -8,7 +8,7 @@ const AddOverallSeries = () => {
 
   const fetchSeries = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/overall-series');
+      const res = await axios.get('https://uploads-backend.onrender.com//api/overall-series');
       setSeriesList(res.data);
     } catch (error) {
       console.error('Error fetching series:', error);
@@ -17,7 +17,7 @@ const AddOverallSeries = () => {
 
   const handleAddSeries = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/overall-series', {
+      const res = await axios.post('https://uploads-backend.onrender.com//api/overall-series', {
         name: seriesName,
         overallId: overallId,
       });
@@ -30,7 +30,7 @@ const AddOverallSeries = () => {
 
   const handleDeleteSeries = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/overall-series/${id}`);
+      await axios.delete(`https://uploads-backend.onrender.com//api/overall-series/${id}`);
       alert('Series deleted');
       fetchSeries();
     } catch (error) {

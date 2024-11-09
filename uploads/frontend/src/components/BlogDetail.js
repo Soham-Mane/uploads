@@ -18,8 +18,8 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        console.log(`Fetching blog from: http://localhost:5000/api/blogs/${id}`); // Log request URL
-        const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
+        console.log(`Fetching blog from: https://uploads-backend.onrender.com//api/blogs/${id}`); // Log request URL
+        const response = await axios.get(`https://uploads-backend.onrender.com//api/blogs/${id}`);
         setBlog(response.data);
       } catch (error) {
         console.error('Error fetching the blog: ', error);
@@ -34,7 +34,7 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/blogs');
+        const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
         setBlogs(response.data);
         console.log(response.data);
       } catch (error) {
@@ -186,7 +186,7 @@ const BlogPost = () => {
            
           </div>
            {blog.imagePath && (
-        <img src={`http://localhost:5000/${blog.imagePath}`} alt={blog.title} style={imageStyle} />
+        <img src={`https://uploads-backend.onrender.com//${blog.imagePath}`} alt={blog.title} style={imageStyle} />
       )}
       <br />
           <p className="text-lg text-gray-800 mb-6">
@@ -273,7 +273,7 @@ const BlogPost = () => {
         <div className="w-28 h-20 bg-gray-200 flex-shrink-0 rounded-md overflow-hidden">
           {popBlog.imagePath ? (
             <img
-              src={`http://localhost:5000/${popBlog.imagePath}`}
+              src={`https://uploads-backend.onrender.com//${popBlog.imagePath}`}
               alt={popBlog.title}
               className="w-full h-full object-cover"
             />

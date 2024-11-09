@@ -9,7 +9,7 @@ const DisplayTournament = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tournaments');
+        const res = await axios.get('https://uploads-backend.onrender.com//api/tournaments');
         setTournaments(res.data);
         setError(null);
       } catch (err) {
@@ -40,7 +40,7 @@ const DisplayTournament = () => {
               <div className="flex items-center">
                 {/* Display the tournament image */}
                 <img
-                  src={`http://localhost:5000/${tournament.image}`} // Path to the tournament image
+                  src={`https://uploads-backend.onrender.com//${tournament.image}`} // Path to the tournament image
                   alt={tournament.name}
                   className="h-12 w-12 rounded-lg mr-4 object-cover"
                 />

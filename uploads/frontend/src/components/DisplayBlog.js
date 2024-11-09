@@ -13,7 +13,7 @@ const NewsSection = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/blogs');
+        const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
         setBlogs(response.data);
         // console.log(response.data);
       } catch (error) {
@@ -57,7 +57,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
                 <div className="w-1/2 md:w-32 h-24 bg-gray-300 rounded-md">
                   {blog.imagePath && (
                     <img
-                      src={`http://localhost:5000/${blog.imagePath}`}
+                      src={`https://uploads-backend.onrender.com//${blog.imagePath}`}
                       alt={blog.title}
                       className="w-full h-full object-cover" // Make the image responsive
                     />

@@ -48,7 +48,7 @@ const RankingTable = ({ format, category }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5000/rankings/${category}/${format}`
+          `https://uploads-backend.onrender.com//rankings/${category}/${format}`
         );
         setRankings(response.data);
       } catch (error) {

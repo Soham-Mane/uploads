@@ -8,7 +8,7 @@ const ParentComponent = () => {
   useEffect(() => {
     const fetchSeries = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/series');
+        const response = await axios.get('https://uploads-backend.onrender.com//api/series');
         if (response.data.length > 0) {
           // Extract the offset IDs from the response
           const fetchedOffsets = response.data.map((series) => series.offset);

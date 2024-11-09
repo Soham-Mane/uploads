@@ -20,7 +20,7 @@ const AddTournament = () => {
 
   const createOrFetchTournament = async () => {
     try {
-      const existingTournament = await axios.get(`http://localhost:5000/api/tournaments?name=${tournamentName}`);
+      const existingTournament = await axios.get(`https://uploads-backend.onrender.com//api/tournaments?name=${tournamentName}`);
 
       const matchedTournament = existingTournament.data.find(
         (tournament) => tournament.name.toLowerCase() === tournamentName.toLowerCase()
@@ -37,7 +37,7 @@ const AddTournament = () => {
         formData.append('edate', new Date(endDate));
         if (tournamentImage) formData.append('image', tournamentImage);
 
-        const res = await axios.post('http://localhost:5000/api/tournaments', formData, {
+        const res = await axios.post('https://uploads-backend.onrender.com//api/tournaments', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -58,7 +58,7 @@ const AddTournament = () => {
     }
 
     try {
-      await axios.post(`http://localhost:5000/api/tournaments/${tournamentId}/teams`, {
+      await axios.post(`https://uploads-backend.onrender.com//api/tournaments/${tournamentId}/teams`, {
         name: teamName,
         wins,
         losses,

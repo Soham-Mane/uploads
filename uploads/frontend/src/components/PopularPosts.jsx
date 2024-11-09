@@ -22,7 +22,7 @@ const PopularPosts = ({ blogs }) => {
             <div className="w-28 h-20 bg-gray-200 flex-shrink-0 rounded-md overflow-hidden">
               {popBlog.imagePath ? (
                 <img
-                  src={`http://localhost:5000/${popBlog.imagePath}`}
+                  src={`https://uploads-backend.onrender.com//${popBlog.imagePath}`}
                   alt={popBlog.title}
                   className="w-full h-full object-cover"
                 />

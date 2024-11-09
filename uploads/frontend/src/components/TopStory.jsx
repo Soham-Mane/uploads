@@ -10,7 +10,7 @@ const TopStory = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/blogs');
+                const response = await axios.get('https://uploads-backend.onrender.com//api/blogs');
                 setBlogs(response.data);
             } catch {
                 console.error('Error fetching data');
@@ -47,7 +47,7 @@ const TopStory = () => {
                 <div className="w-full h-2/3 bg-gray-300 rounded-md">
                     {blog.imagePath && (
                         <img
-                            src={`http://localhost:5000/${blog.imagePath}`}
+                            src={`https://uploads-backend.onrender.com//${blog.imagePath}`}
                             alt={blog.title}
                             className="w-full h-full object-cover"
                         />
