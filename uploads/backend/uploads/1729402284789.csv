@@ -1,0 +1,121 @@
+format,category,playerName,countryName,ranking
+T20,Team,Virat Kohli,India,1
+T20,Team,Babar Azam,Pakistan,2
+T20,Team,Kane Williamson,New Zealand,3
+T20,Team,David Warner,Australia,4
+T20,Team,Ben Stokes,England,5
+T20,Team,Rohit Sharma,India,6
+T20,Team,Steve Smith,Australia,7
+T20,Team,Shaheen Afridi,Pakistan,8
+T20,Team,Trent Boult,New Zealand,9
+T20,Team,Jasprit Bumrah,India,10
+T20,Batting,Shakib Al Hasan,Bangladesh,1
+T20,Batting,Rashid Khan,Afghanistan,2
+T20,Batting,Faf du Plessis,South Africa,3
+T20,Batting,Quinton de Kock,South Africa,4
+T20,Batting,Mohammad Rizwan,Pakistan,5
+T20,Batting,Pat Cummins,Australia,6
+T20,Batting,KL Rahul,India,7
+T20,Batting,Jos Buttler,England,8
+T20,Batting,Mitchell Starc,Australia,9
+T20,Batting,Shubman Gill,India,10
+T20,Bowling,Hardik Pandya,India,1
+T20,Bowling,Suryakumar Yadav,India,2
+T20,Bowling,Ravindra Jadeja,India,3
+T20,Bowling,Rassie van der Dussen,South Africa,4
+T20,Bowling,Sam Curran,England,5
+T20,Bowling,Virat Kohli,India,6
+T20,Bowling,Babar Azam,Pakistan,7
+T20,Bowling,Kane Williamson,New Zealand,8
+T20,Bowling,David Warner,Australia,9
+T20,Bowling,Ben Stokes,England,10
+T20,All-rounder,Rohit Sharma,India,1
+T20,All-rounder,Steve Smith,Australia,2
+T20,All-rounder,Shaheen Afridi,Pakistan,3
+T20,All-rounder,Trent Boult,New Zealand,4
+T20,All-rounder,Jasprit Bumrah,India,5
+T20,All-rounder,Shakib Al Hasan,Bangladesh,6
+T20,All-rounder,Rashid Khan,Afghanistan,7
+T20,All-rounder,Faf du Plessis,South Africa,8
+T20,All-rounder,Quinton de Kock,South Africa,9
+T20,All-rounder,Mohammad Rizwan,Pakistan,10
+ODI,Team,Pat Cummins,Australia,1
+ODI,Team,KL Rahul,India,2
+ODI,Team,Jos Buttler,England,3
+ODI,Team,Mitchell Starc,Australia,4
+ODI,Team,Shubman Gill,India,5
+ODI,Team,Hardik Pandya,India,6
+ODI,Team,Suryakumar Yadav,India,7
+ODI,Team,Ravindra Jadeja,India,8
+ODI,Team,Rassie van der Dussen,South Africa,9
+ODI,Team,Sam Curran,England,10
+ODI,Batting,Virat Kohli,India,1
+ODI,Batting,Babar Azam,Pakistan,2
+ODI,Batting,Kane Williamson,New Zealand,3
+ODI,Batting,David Warner,Australia,4
+ODI,Batting,Ben Stokes,England,5
+ODI,Batting,Rohit Sharma,India,6
+ODI,Batting,Steve Smith,Australia,7
+ODI,Batting,Shaheen Afridi,Pakistan,8
+ODI,Batting,Trent Boult,New Zealand,9
+ODI,Batting,Jasprit Bumrah,India,10
+ODI,Bowling,Shakib Al Hasan,Bangladesh,1
+ODI,Bowling,Rashid Khan,Afghanistan,2
+ODI,Bowling,Faf du Plessis,South Africa,3
+ODI,Bowling,Quinton de Kock,South Africa,4
+ODI,Bowling,Mohammad Rizwan,Pakistan,5
+ODI,Bowling,Pat Cummins,Australia,6
+ODI,Bowling,KL Rahul,India,7
+ODI,Bowling,Jos Buttler,England,8
+ODI,Bowling,Mitchell Starc,Australia,9
+ODI,Bowling,Shubman Gill,India,10
+ODI,All-rounder,Hardik Pandya,India,1
+ODI,All-rounder,Suryakumar Yadav,India,2
+ODI,All-rounder,Ravindra Jadeja,India,3
+ODI,All-rounder,Rassie van der Dussen,South Africa,4
+ODI,All-rounder,Sam Curran,England,5
+ODI,All-rounder,Virat Kohli,India,6
+ODI,All-rounder,Babar Azam,Pakistan,7
+ODI,All-rounder,Kane Williamson,New Zealand,8
+ODI,All-rounder,David Warner,Australia,9
+ODI,All-rounder,Ben Stokes,England,10
+Test,Team,Rohit Sharma,India,1
+Test,Team,Steve Smith,Australia,2
+Test,Team,Shaheen Afridi,Pakistan,3
+Test,Team,Trent Boult,New Zealand,4
+Test,Team,Jasprit Bumrah,India,5
+Test,Team,Shakib Al Hasan,Bangladesh,6
+Test,Team,Rashid Khan,Afghanistan,7
+Test,Team,Faf du Plessis,South Africa,8
+Test,Team,Quinton de Kock,South Africa,9
+Test,Team,Mohammad Rizwan,Pakistan,10
+Test,Batting,Pat Cummins,Australia,1
+Test,Batting,KL Rahul,India,2
+Test,Batting,Jos Buttler,England,3
+Test,Batting,Mitchell Starc,Australia,4
+Test,Batting,Shubman Gill,India,5
+Test,Batting,Hardik Pandya,India,6
+Test,Batting,Suryakumar Yadav,India,7
+Test,Batting,Ravindra Jadeja,India,8
+Test,Batting,Rassie van der Dussen,South Africa,9
+Test,Batting,Sam Curran,England,10
+Test,Bowling,Virat Kohli,India,1
+Test,Bowling,Babar Azam,Pakistan,2
+Test,Bowling,Kane Williamson,New Zealand,3
+Test,Bowling,David Warner,Australia,4
+Test,Bowling,Ben Stokes,England,5
+Test,Bowling,Rohit Sharma,India,6
+Test,Bowling,Steve Smith,Australia,7
+Test,Bowling,Shaheen Afridi,Pakistan,8
+Test,Bowling,Trent Boult,New Zealand,9
+Test,Bowling,Jasprit Bumrah,India,10
+Test,All-rounder,Shakib Al Hasan,Bangladesh,1
+Test,All-rounder,Rashid Khan,Afghanistan,2
+Test,All-rounder,Faf du Plessis,South Africa,3
+Test,All-rounder,Quinton de Kock,South Africa,4
+Test,All-rounder,Mohammad Rizwan,Pakistan,5
+Test,All-rounder,Pat Cummins,Australia,6
+Test,All-rounder,KL Rahul,India,7
+Test,All-rounder,Jos Buttler,England,8
+Test,All-rounder,Mitchell Starc,Australia,9
+Test,All-rounder,Shubman Gill,India,10
