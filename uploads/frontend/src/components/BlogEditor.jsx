@@ -114,10 +114,10 @@ const StyledWrapper = styled.div`
       className="max-w-2xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-10 space-y-6 "
     >
       <h1 className="text-3xl font-bold text-center text-gray-700">Create Blog</h1>
-      <div className="flex flex-col">
+      <div className="flex flex-wrap gap-5">
 
    <label className="text-lg font-semibold text-gray-600 mb-2">Category Name</label>
-<div className="flex space-x-6 mt-2">
+
   <label className="flex items-center space-x-2 cursor-pointer">
     <input
       type="radio"
@@ -197,8 +197,6 @@ const StyledWrapper = styled.div`
       Top Story
     </span>
   </label>
-</div>
-<div className='flex space-x-6 mt-4'>
 <label className="flex items-center space-x-2 cursor-pointer">
     <input
       type="radio"
@@ -262,7 +260,7 @@ const StyledWrapper = styled.div`
   </label>
 </div>
 
-      </div>
+
       <div className="flex flex-col">
         <label className="text-lg font-semibold text-gray-600 mb-2">Title</label>
         <input
