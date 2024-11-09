@@ -261,14 +261,14 @@ const BlogPost = () => {
         <div className="col-span-1">
           {/* Popular Posts */}
           <div>
-          <div className="bg-white shadow-md rounded-lg p-6">
+          <div className="shadow-md rounded-lg p-6">
   <h3 className="text-xl font-semibold mb-4">Popular Posts</h3>
   <ul className="space-y-6">
     {PopularPost.slice(0, visibleCount).map((popBlog) => (
       <div
         key={popBlog._id}
         onClick={() => handleBlogClick(popBlog._id)}
-        className="flex space-x-4 cursor-pointer hover:bg-gray-50 p-2 rounded-md transition-colors duration-300"
+        className="flex space-x-4 cursor-pointer p-2 rounded-md transition-colors duration-300"
       >
         <div className="w-28 h-20 bg-gray-200 flex-shrink-0 rounded-md overflow-hidden">
           {popBlog.imagePath ? (
@@ -278,14 +278,14 @@ const BlogPost = () => {
               className="w-full h-full object-cover"
             />
           ) : (
-            <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500">
+            <div className="w-full h-full bg-gray-300 flex items-center justify-center">
               No Image
             </div>
           )}
         </div>
         <div className="flex flex-col justify-between">
-          <h4 className="text-sm font-semibold text-gray-800">{popBlog.title}</h4>
-          <p className="text-gray-500 text-xs">
+          <h4 className="text-sm font-semibold ">{popBlog.title}</h4>
+          <p className="text-xs">
             Rahul Mishra
             <br />
             {`${new Date(popBlog.createdAt).toLocaleDateString('en-GB', {
