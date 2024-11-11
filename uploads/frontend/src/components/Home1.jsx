@@ -7,6 +7,8 @@ import Ranking from './Ranking'
 import LatestNews from './LatestNews';
 import TopStory from './TopStory';
 import DisplayTournament from './DisplayTournament';
+import DisplayTournamentH from './DisplayTournamentH';
+import LatestNews1 from './CricketNews';
 import TrendingNews from './TrendingNews';
 const Home1 = () => {
   const [blogs, setBlogs] = useState([]);
@@ -44,16 +46,18 @@ const handleBlogClick = (blogId) => {
       <Carousel />
       </div>
       {/* Additional Content */}
-      <div className='w-full h-fit flex flex-col md:flex-row'>
+    {/* Additional Content */}
+    <div className='w-full h-fit flex flex-col md:flex-row'>
           <div className='md:w-3/4 '>
           <HomeDisplay/>
           </div>
           <div className='md:w-1/4'>
-          <TrendingNews/>
-          <Ranking/>
           
+          <Ranking/>
+          <DisplayTournamentH/>
           </div>
       </div>
+      <LatestNews1/>
 
       {/* <div className='w-full h-fit flex flex-col md:flex-row'>
           <div className='md:w-3/4 none'>
