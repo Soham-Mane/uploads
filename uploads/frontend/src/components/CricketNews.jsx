@@ -10,7 +10,7 @@ const LatestNews1 = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/blogs');
+                const response = await axios.get('https://uploads-backend.onrender.com/api/blogs');
                 setBlogs(response.data);
             } catch {
                 console.error('Error fetching data');
