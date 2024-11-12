@@ -43,7 +43,7 @@ const LatestNews1 = () => {
                 <div className="w-full h-2/3 bg-gray-300 rounded-md">
                     {blog.imagePath && (
                         <img
-                            src={`http://localhost:5000/${blog.imagePath}`}
+                            src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
                             alt={blog.title}
                             className="w-full h-full object-cover"
                         />
