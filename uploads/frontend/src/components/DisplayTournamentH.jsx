@@ -9,7 +9,7 @@ const DisplayTournamentH = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/tournaments');
+        const res = await axios.get('https://uploads-backend.onrender.com/api/tournaments');
         setTournaments(res.data);
         setError(null);
 
