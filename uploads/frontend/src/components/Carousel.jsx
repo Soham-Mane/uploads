@@ -39,7 +39,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-[90%] flex justify-center items-center mt-8 bg-slate-700 rounded-lg p-4 shadow-lg overflow-hidden">
+    <div className="relative w-[90%] flex justify-center items-center mt-8  rounded-lg p-4  overflow-hidden">
       {/* Left Arrow */}
       <button
         onClick={handlePrev}
