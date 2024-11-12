@@ -5,6 +5,7 @@ import TrendingNews from './TrendingNews';
 import Articles from './Articles';
 import Head from './Head';
 import Foot from './Foot';
+import IPL2025 from './IPL2025';
 const NewsSection = () => {
   const [blogs, setBlogs] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4); // State to track visible blog count
@@ -108,6 +109,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
           <Articles/>
         </div>
       </div>
+          <IPL2025/>
     </div>
     <Foot />
     </div>
