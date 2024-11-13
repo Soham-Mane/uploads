@@ -78,7 +78,7 @@ const IPL2025 = () => {
     };
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
             {/* Content Grid */}
             <div className='flex flex-row items-center justify-center gap-4 p-4'>
                 <h2 className='text-4xl font-bold'>IPL 2025</h2>
