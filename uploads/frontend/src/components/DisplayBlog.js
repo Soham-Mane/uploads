@@ -48,9 +48,9 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
      
       {/* Latest News Section */}
     
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {/* Latest News */}
-        <div className="col-span-2 md:p-10">
+        <div className="col-span-2 ">
         <div className='flex flex-row items-center justify-center gap-4 p-4'>
             <h2 className='text-4xl font-bold'>Latest News</h2>
             {/* BLACK LINE */}
