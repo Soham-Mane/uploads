@@ -49,10 +49,10 @@ const handleBlogClick = (blogId) => {
       {/* Additional Content */}
     {/* Additional Content */}
     <div className='w-full h-fit flex flex-col md:flex-row'>
-          <div className='md:w-3/4 '>
+          <div className='md:w-2/3 '>
           <HomeDisplay/>
           </div>
-          <div className='md:w-1/4'>
+          <div className='md:w-1/3'>
           
           <Ranking/>
           <DisplayTournamentH/>
