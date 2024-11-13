@@ -41,7 +41,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
 
   return (
    
-      <div className="h-full w-full">
+      <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
       <Head />
       <Hero/>
     <div className=" container mx-auto  px-4 py-2">
