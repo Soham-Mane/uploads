@@ -36,16 +36,16 @@ const IPL2025 = () => {
 
         return filteredBlogs.map((blog) => (
             <div
-                className="shadow-md md:w-11/12 w-full h-60 rounded-lg p-4 mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                className=" w-11/12 gap-2 h-72 rounded-lg  mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
                 key={blog._id}
                 onClick={() => handleBlogClick(blog._id)}
             >
-                <div className="w-full h-2/3 bg-gray-300 rounded-md">
+                <div className="w-full h-2/3  ">
                     {blog.imagePath && (
                         <img
                             src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
                             alt={blog.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-3xl"
                         />
                     )}
                 </div>
@@ -78,7 +78,7 @@ const IPL2025 = () => {
     };
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="relative w-full h-[500px] max-w-[1320px] mx-auto bg-cover bg-center">
             {/* Content Grid */}
             <div className='flex flex-row items-center justify-center gap-4 p-4'>
                 <h2 className='text-4xl font-bold'>IPL 2025</h2>
