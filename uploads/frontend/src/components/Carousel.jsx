@@ -82,7 +82,7 @@ const Carousel = () => {
               key={match.id}
               className="flex-shrink-0 w-1/3 p-1" // Adjust width to fit items per view
             >
-              <div className="flex w-[250px] h-48 " data-matchid={match.id}>
+              <div className="flex w-[250px] h-36 " data-matchid={match.id}>
                 <div className="bg-white h-full w-full rounded-2xl border border-gray-300 px-4 py-2 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex gap-3">
                 <p className="text-xs text-gray-700 font-semibold">
