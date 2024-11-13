@@ -38,7 +38,7 @@ const LatestNews = () => {
 
         return filteredBlogs.map((blog) => (
             <div
-                className="  w-11/12 gap-4 h-72 rounded-lg p-4 mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                className="  w-11/12 gap-4 h-72 rounded-lg mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
                 key={blog._id}
                 onClick={() => handleBlogClick(blog._id)}
             >
