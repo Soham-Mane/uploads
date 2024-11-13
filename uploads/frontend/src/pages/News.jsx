@@ -8,7 +8,7 @@ import Articles from '../components/Articles.jsx';
 import DisplayBlog from '../components/DisplayBlog.js'
 const News = () => {
   return (
-    <div className="h-full w-full">
+    <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
       <Head />
       <div className='min-h-screen flex flex-col px-8'>
       <div className='w-full  h-fit flex flex-col md:flex-row'>
