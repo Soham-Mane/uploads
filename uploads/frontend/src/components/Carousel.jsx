@@ -23,7 +23,7 @@ const Carousel = () => {
     fetchMatches();
   }, []);
 
-  const visibleItems = window.innerWidth < 768 ? 1 : 40; // Number of items to show at a time
+  const visibleItems = window.innerWidth < 768 ? 1 : 35; // Number of items to show at a time
 
   // Handle navigation
   const handlePrev = () => {
@@ -37,9 +37,29 @@ const Carousel = () => {
       prevIndex === matches.length - visibleItems ? 0 : prevIndex + 1
     );
   };
-
+  function formatMatchName(matchName) {
+    const match = matchName.match(/(.+?) vs (.+?), (.+ T20I)/);
+    if (match) {
+      const team1 = match[1];
+      const team2 = match[2];
+      const matchNumber = match[3];
+      return `${matchNumber} ${team1} vs ${team2}`;
+    }
+    return matchName;
+  }
+  function formatMatchName1(matchName) {
+    const match = matchName.match(/(.+?) vs (.+?),/); // Match team names before the comma
+    if (match) {
+      const team1 = match[1];
+      const team2 = match[2];
+      return `${team1}\n${team2}`; // Return only the team names, separated by a newline
+    }
+    return matchName; // Return the original name if it doesn't match the expected pattern
+  }
+  
+  
   return (
-    <div className="relative w-[90%] flex justify-center items-center mt-8  rounded-lg p-4  overflow-hidden">
+    <div className="relative w-full flex justify-center items-center mt-8  p-4 shadow-lg overflow-hidden">
       {/* Left Arrow */}
       <button
         onClick={handlePrev}
@@ -64,65 +84,30 @@ const Carousel = () => {
             >
               <div className="flex w-[250px] h-48 " data-matchid={match.id}>
                 <div className="bg-white h-full w-full rounded-2xl border border-gray-300 px-4 py-2 shadow-md hover:shadow-lg transition-shadow">
-                  <p className="text-xs text-gray-700 font-semibold">
-                    {match.name}
+                <div className="flex gap-3">
+                <p className="text-xs text-gray-700 font-semibold">
+                    {formatMatchName(match.name)}
                   </p>
-                 <div className="flex border-t">
-                  <div className="w-1/3">
-                  <div className="py-1  border-gray-200">
-                    <p className="text-gray-600 text-sm font-semibold">
-                      Date
-                    </p>
-                    <p className="text-gray-600 text-xs">
-                      {match.date}
-                    </p>
-                  </div>
-                  <div className="flex items-center text-sm my-2">
-                <div className="flex items-center">
+                  <div className="flex items-center">
                   
-                <p className="rounded-[40px] min-w-[33px] whitespace-nowrap text-[10px] px-2 bg-[#6B63FF] bg-opacity-20 text-[#6B63FF]">{match.matchType}</p>
+                  <p className="rounded-[40px] min-w-[33px] whitespace-nowrap text-[10px] px-2 bg-[#6B63FF] bg-opacity-20 text-[#6B63FF]">{match.matchType}</p>
+                  </div>
                 </div>
+                 
+                 <div className="flex border-t">
+                  <div className="w-1/2 mt-2">
+                  <p className="text-base text-gray-700 font-semibold">
+            {formatMatchName1(match.name).split("\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </p>
                 
-              </div>
                   </div>
-                <div className="w-2/3">
+                <div className="w-1/2">
                   
-                  {/* <div className="flex items-center p-1">
-                  <div className="flex items-center w-[120px]">
-                    
-                    <p className="text-xs font-medium ">{match.teams[1]}</p>
-                  </div>
-                  <div className="flex items-center">
-                    { (
-                  <div>
-                             <span className="text-[14px] font-bold ml-1">100</span>
-                             <span className="text-[14px] font-bold ">/9</span>
-                             <span className="text-[10px] text-[#808080] ml-1">4</span>
-                    
-                   
-                  </div>
-                )}
-                  </div>
-                  </div>
-
-                  <div className="flex items-center pb-1">
-                  <div className="flex items-center w-[120px]">
-                    
-                    <p className="text-xs font-medium ">{match.teams[1]}</p>
-                  </div>
-                  <div className="flex items-center">
-                    {
-                         (
-                            <div>
-                               <span className="text-[14px] font-bold ml-1">56</span>
-                               <span className="text-[14px] font-bold ">/8</span>
-                               <span className="text-[10px] text-[#808080] ml-1">2</span> 
-                                </div>
-                        )
-                    }
-               
-                  </div>
-                  </div> */}
                   <div className="py-1  border-gray-200 mt-2">
                     {match.status === "Match not started" ? (
                       <p className="text-gray-600 text-sm font-semibold">Match Not Started</p>
@@ -164,6 +149,9 @@ const Carousel = () => {
                     {/* <p className="text-gray-600 text-sm font-semibold">
                       Venue
                     </p> */}
+                    <p className="text-gray-600 text-xs">
+                      {match.status}
+                    </p>
                     <p className="text-gray-600 text-xs">
                       {match.venue}
                     </p>
