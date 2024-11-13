@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import LatestNews from './LatestNews';
-
+import RankingHPage from './RankingH';
 const HomeDisplay = () => {
     const [blogs, setBlogs] = useState([]);
     const navigate = useNavigate();
@@ -131,6 +131,11 @@ onClick={() => handleBlogClick(blog._id)}
     return (
         <div className="container mx-auto p-4">
             {/* Tab Header */}
+            <div className="flex">
+                <div className="yes">
+                
+               
+            
             <div className="flex space-x-4 mb-4 border-b">
                 <button
                     className={`py-2 px-4 ${activeTab === 'articles' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
@@ -162,6 +167,11 @@ onClick={() => handleBlogClick(blog._id)}
             <div className="grid grid-cols-1 lg:grid-cols-3 mb-12">
                 {renderContent()}
             </div>
+                     </div>
+            <div>
+                <RankingHPage/>
+            </div>
+               </div> 
             <div>
                 <LatestNews/>
             </div>
