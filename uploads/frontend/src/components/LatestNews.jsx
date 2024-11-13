@@ -38,16 +38,16 @@ const LatestNews = () => {
 
         return filteredBlogs.map((blog) => (
             <div
-                className="shadow-md md:w-11/12 w-full h-60 rounded-lg p-4 mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                className="  w-11/12 gap-4 h-72 rounded-lg p-4 mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
                 key={blog._id}
                 onClick={() => handleBlogClick(blog._id)}
             >
-                <div className="w-full h-2/3 bg-gray-300 rounded-md">
+                <div className="w-full h-2/3 ">
                     {blog.imagePath && (
                         <img
                             src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
                             alt={blog.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover rounded-3xl"
                         />
                     )}
                 </div>
@@ -76,10 +76,11 @@ const LatestNews = () => {
     };
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-2 ">
             {/* Content Grid */}
             <div className='flex flex-row items-center justify-center gap-4 p-4'>
             <h2 className='text-4xl font-bold'>Latest News</h2>
+            {/* BLACK LINE */}
             <div className="flex-1 border-t border-gray-400 "
             style={{
                 borderTop: '2px solid', 
@@ -89,7 +90,7 @@ const LatestNews = () => {
             
             ></div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-4 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 mb-12">
                 {renderContent()}
             </div>
             <div>
