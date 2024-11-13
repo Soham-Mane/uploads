@@ -55,7 +55,7 @@ const HomeDisplay = () => {
 
         return filteredBlogs.map((blog) => (
 //             <div
-//                 className="shadow-md md:w-11/12 w-full h-60 rounded-lg p-4 mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer "
+//                 className="shadow-md md:w-11/12 w-full h-60 rounded-lg mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer "
 //                 key={blog._id}
 //                 onClick={() => handleBlogClick(blog._id)}
 //             >
