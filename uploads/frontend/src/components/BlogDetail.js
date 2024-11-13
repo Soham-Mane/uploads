@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import styled from "styled-components";
 import TopStory from './TopStory';
 import Articles from './Articles';
+import IPL2025 from './IPL2025';
 
 const BlogPost = () => {
   const [blogs, setBlogs] = useState([]);
@@ -87,7 +88,6 @@ const BlogPost = () => {
   .card {
   width: fit-content;
   height: fit-content;
-  background-color: rgb(238, 238, 238);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,7 +163,7 @@ const BlogPost = () => {
 `;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
       {/* Blog Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
         {/* Main Blog Post */}
@@ -253,7 +253,7 @@ const BlogPost = () => {
         </a>
       </div>
     </StyledWrapper>
-    <TopStory/>
+  
           
         </div>
 
@@ -268,7 +268,7 @@ const BlogPost = () => {
       <div
         key={popBlog._id}
         onClick={() => handleBlogClick(popBlog._id)}
-        className="flex space-x-4 cursor-pointer p-2 rounded-md transition-colors duration-300"
+        className="flex space-x-4 cursor-pointer  p-2 rounded-md transition-colors duration-300"
       >
         <div className="w-28 h-20 bg-gray-200 flex-shrink-0 rounded-md overflow-hidden">
           {popBlog.imagePath ? (
@@ -278,14 +278,14 @@ const BlogPost = () => {
               className="w-full h-full object-cover"
             />
           ) : (
-            <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+            <div className="w-full h-full bg-gray-300 flex items-center justify-center ">
               No Image
             </div>
           )}
         </div>
         <div className="flex flex-col justify-between">
           <h4 className="text-sm font-semibold ">{popBlog.title}</h4>
-          <p className="text-xs">
+          <p className=" text-xs">
             Rahul Mishra
             <br />
             {`${new Date(popBlog.createdAt).toLocaleDateString('en-GB', {
@@ -311,6 +311,7 @@ const BlogPost = () => {
             
         </div>
       </div>
+      <IPL2025/>
     </div>
   );
 };
