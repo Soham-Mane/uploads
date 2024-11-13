@@ -8,7 +8,7 @@ import Articles from '../components/Articles.jsx';
 
 const Schedule = () => {
   return (
-    <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
+    <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
       <Head />
       <div className='min-h-screen flex flex-col px-8'>
       <div className='w-full  h-fit flex flex-col md:flex-row'>

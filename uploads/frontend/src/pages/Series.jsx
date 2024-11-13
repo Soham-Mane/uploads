@@ -10,7 +10,7 @@ const Series = () => {
   const [showAllSeries, setShowAllSeries] = useState(true); // State to track which component to display
 
   return (
-    <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
+    <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
       <Head />
       <div className="flex flex-col md:flex-row p-4 md:p-10 gap-10">
         <div className="flex-grow w-2/3">
