@@ -10,6 +10,7 @@ import DisplayTournament from './DisplayTournament';
 import DisplayTournamentH from './DisplayTournamentH';
 import LatestNews1 from './CricketNews';
 import TrendingNews from './TrendingNews';
+import Foot from './Foot';
 const Home1 = () => {
   const [blogs, setBlogs] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4); // State to track visible blog count
@@ -35,7 +36,7 @@ const handleBlogClick = (blogId) => {
 };
   return (
   
-    <div className="min-h-screen flex flex-col px-8">
+    <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
     {/* Header */}
     
     <div>
@@ -81,7 +82,7 @@ const handleBlogClick = (blogId) => {
     </div>
 
     {/* Footer */}
-    
+    <Foot/>
   </div>
   )
 }
