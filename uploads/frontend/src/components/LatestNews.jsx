@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import TopStory from './TopStory';
-
+import DisplayTournamentH from './DisplayTournamentH';
 const LatestNews = () => {
     const [blogs, setBlogs] = useState([]);
     const navigate = useNavigate();
@@ -78,6 +78,9 @@ const LatestNews = () => {
     return (
         <div className="container mx-auto p-2 ">
             {/* Content Grid */}
+            <div className="flex">
+            <div>
+            
             <div className='flex flex-row items-center justify-center gap-4 p-4'>
             <h2 className='text-4xl font-bold'>Latest News</h2>
             {/* BLACK LINE */}
@@ -92,6 +95,11 @@ const LatestNews = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 mb-12">
                 {renderContent()}
+            </div>
+                 </div>
+            <div>
+            <DisplayTournamentH/>
+                </div>
             </div>
             <div>
                 <TopStory/>
