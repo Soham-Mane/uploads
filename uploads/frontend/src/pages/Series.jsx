@@ -13,7 +13,7 @@ const Series = () => {
     <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
       <Head />
       <div className="flex flex-col md:flex-row p-4 md:p-10 gap-10">
-        <div className="flex-grow">
+        <div className="flex-grow w-2/3">
           <div className="max-w-[1000px] mx-auto">
             {/* Buttons to toggle between All Series and Series Info */}
             <div className="flex space-x-4 mb-6">
@@ -42,7 +42,7 @@ const Series = () => {
           </div>
         </div>
         
-        <div className="flex-shrink-0 w-full md:w-1/4">
+        <div className="flex-shrink-0 w-full md:w-1/3">
           <TrendingNews />
           <Articles />
         </div>
