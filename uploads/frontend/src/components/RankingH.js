@@ -104,7 +104,7 @@ const RankingsHPage = () => {
             onClick={() => setCategory(cat)}
             className={`mx-4 py-2 text-sm font-semibold ${
               category === cat
-                ? "text-green-600 border-b-2 border-green-600"
+                ? "text-black-600 border-b-2 border-black-600"
                 : "text-gray-500"
             }`}
           >
@@ -120,7 +120,7 @@ const RankingsHPage = () => {
             onClick={() => setFormat(fmt)}
             className={`mx-4 py-2 text-sm font-semibold ${
               format === fmt
-                ? "text-green-600 border-b-2 border-green-600"
+                ? "text-black-600 border-b-2 border-black-600"
                 : "text-gray-500"
             }`}
           >
