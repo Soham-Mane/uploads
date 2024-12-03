@@ -133,7 +133,7 @@ const RankingsHPage = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={() => navigate("/ranking")}
-          className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700"
+          className=" text-black py-2 px-4 rounded-lg "
         >
           Load More
         </button>
