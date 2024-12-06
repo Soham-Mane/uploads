@@ -34,13 +34,12 @@ const WTCPage = () => {
 
   return (
    
-      <div className="h-full w-full">
+      <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
       <Head />
-    <div className="container mx-auto px-4 py-2">
+    <div className="flex flex-col md:flex-row p-4 md:p-10 gap-10">
       {/* Latest News Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
-        {/* Latest News */}
-        <div className="col-span-2 md:p-10">
+      <div className='flex-grow w-2/3'>
+      <div className="col-span-2 md:p-10">
           
           <div className="space-y-10">
             {/* News Card */}
@@ -96,8 +95,9 @@ const WTCPage = () => {
           )}
         </div>
 
-        {/* Trending News and Articles */}
-        <div className="space-y-8 ">
+      </div>
+      <div className="flex-shrink-0 w-full md:w-1/3">
+      <div className="space-y-8 ">
           {/* Trending News */}
      
   <TrendingNews/>
@@ -106,6 +106,7 @@ const WTCPage = () => {
           <Articles/>
         </div>
       </div>
+ 
     </div>
     <Foot />
     </div>
