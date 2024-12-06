@@ -71,7 +71,7 @@ const Carousel = () => {
       {/* Carousel Items */}
       <div className="w-full overflow-hidden">
         <div
-          className="flex transition-transform duration-100 ease-in-out"
+          className=" flex transition-transform duration-100 ease-in-out"
           style={{
             transform: `translateX(-${(currentIndex * 200) / visibleItems}%)`,
             width: `${matches.length * (100 / visibleItems)}%`,
@@ -82,7 +82,7 @@ const Carousel = () => {
               key={match.id}
               className="flex-shrink-0 w-1/3 p-1" // Adjust width to fit items per view
             >
-              <div className="flex w-[250px] h-36 " data-matchid={match.id}>
+              <div className="flex w-[250px] h-40 " data-matchid={match.id}>
                 <div className="bg-white h-full w-full rounded-2xl border border-gray-300 px-4 py-2 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex gap-3">
                 <p className="text-xs text-gray-700 font-semibold">
@@ -96,10 +96,11 @@ const Carousel = () => {
                  
                  <div className="flex border-t">
                   <div className="w-1/2 mt-2">
-                  <p className="text-base text-gray-700 font-semibold">
+                  <p className="text-xs text-gray-700 font-semibold">
             {formatMatchName1(match.name).split("\n").map((line, index) => (
               <span key={index}>
                 {line}
+         
                 <br />
               </span>
             ))}
