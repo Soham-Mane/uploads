@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <div className="h-full w-full">
   <div className='relative w-full  max-w-[1140px] mx-auto bg-cover bg-center'>
+    <Topnav/>
       <Head />
       </div>
       <div>
