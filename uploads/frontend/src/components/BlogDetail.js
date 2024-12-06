@@ -163,7 +163,7 @@ const BlogPost = () => {
 `;
 
   return (
-    <div className="relative w-full h-[500px] max-w-[1200px] mx-auto bg-cover bg-center">
+    <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
       {/* Blog Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
         {/* Main Blog Post */}
