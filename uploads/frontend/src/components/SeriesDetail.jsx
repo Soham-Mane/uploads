@@ -42,14 +42,14 @@ const SeriesDetail = () => {
   }, [id]);
 
   return (
-    <div className="h-full w-full">
+    <div className="relative w-full  max-w-[1140px] mx-auto bg-cover bg-center">
       <Head />
 
       {/* Series Header */}
       
 
       <div className="flex flex-col md:flex-row p-4 md:p-10 gap-10">
-        <div className="flex-grow">
+        <div className="flex-grow w-2/3">
           <div className="max-w-[1000px] mx-auto">
             <div className="p-4">
             <div className="md:min-h-[18px] md:min-w-[180px] flex items-center min-w-[50px] justify-center mt-5 mb-5">
@@ -100,7 +100,7 @@ const SeriesDetail = () => {
           </div>
         </div>
 
-        <div className="flex-shrink-0 w-full md:w-1/4">
+        <div className="flex-shrink-0 w-full md:w-1/3">
           <TrendingNews/>
           <Articles/>
         </div>
