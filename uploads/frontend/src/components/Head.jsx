@@ -15,7 +15,7 @@ const Head = () => {
       <nav>
         <div className="max-w-[1320px] xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
           {/* Logo Section */}
-          <div className="flex items-center">
+          <div className="flex items-center px-4">
             <a className="flex items-center" href="/">
               <img src={Logo} className="h-10 hover:scale-105 transition-transform duration-200" alt="Logo" />
             </a>
