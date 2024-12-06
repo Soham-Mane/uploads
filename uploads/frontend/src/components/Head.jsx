@@ -55,7 +55,7 @@ const Head = () => {
           </div>
 
           {/* Login Button */}
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center px-6">
            
             
             <Link to="/admincms">
@@ -65,7 +65,7 @@ const Head = () => {
             </Link>
             
            
-            <Layout />
+          
             
           </div>
         </div>
@@ -95,7 +95,7 @@ const Head = () => {
                   Login
                 </button>
               </Link>
-              <Layout />
+             
             </div>
           </div>
         )}
