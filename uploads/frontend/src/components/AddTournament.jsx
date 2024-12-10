@@ -13,14 +13,18 @@ const AddTournament = () => {
   const [endDate, setEndDate] = useState('');
   const [tournamentImage, setTournamentImage] = useState(null); // Image state
   const [error, setError] = useState('');
+  const [teamImage, setTeamImage] = useState(null);
 
   const handleImageChange = (e) => {
     setTournamentImage(e.target.files[0]);
   };
+  const handleTeamImageChange = (e) => {
+    setTeamImage(e.target.files[0]);
+  };
 
   const createOrFetchTournament = async () => {
     try {
-      const existingTournament = await axios.get(`https://uploads-backend.onrender.com/api/tournaments?name=${tournamentName}`);
+      const existingTournament = await axios.get(`http://uploads-backend.onrender.com/api/tournaments?name=${tournamentName}`);
 
       const matchedTournament = existingTournament.data.find(
         (tournament) => tournament.name.toLowerCase() === tournamentName.toLowerCase()
@@ -37,7 +41,7 @@ const AddTournament = () => {
         formData.append('edate', new Date(endDate));
         if (tournamentImage) formData.append('image', tournamentImage);
 
-        const res = await axios.post('https://uploads-backend.onrender.com/api/tournaments', formData, {
+        const res = await axios.post('http://uploads-backend.onrender.com/api/tournaments', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -50,20 +54,25 @@ const AddTournament = () => {
       console.error(err);
     }
   };
-
   const addTeam = async () => {
     if (!tournamentId) {
       alert('Please create or fetch a tournament first.');
       return;
     }
-
+  
     try {
-      await axios.post(`https://uploads-backend.onrender.com/api/tournaments/${tournamentId}/teams`, {
-        name: teamName,
-        wins,
-        losses,
-        matches,
-        points,
+      const formData = new FormData();
+      formData.append('name', teamName);
+      formData.append('wins', wins);
+      formData.append('losses', losses);
+      formData.append('matches', matches);
+      formData.append('points', points);
+      if (teamImage) formData.append('image', teamImage);
+  
+      await axios.post(`http://uploads-backend.onrender.com/api/tournaments/${tournamentId}/teams`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
       alert('Team added!');
       setTeamName('');
@@ -71,6 +80,7 @@ const AddTournament = () => {
       setLosses(0);
       setMatches(0);
       setPoints(0);
+      setTeamImage(null);
     } catch (err) {
       setError('An error occurred while adding the team.');
       console.error(err);
@@ -154,6 +164,11 @@ const AddTournament = () => {
               onChange={(e) => setPoints(parseInt(e.target.value) || 0)}
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
             />
+             <input
+             type="file"
+             onChange={handleTeamImageChange}
+             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
+            />
             <button
               onClick={addTeam}
               className="w-full p-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition duration-300"
@@ -170,3 +185,4 @@ const AddTournament = () => {
 };
 
 export default AddTournament;
+
