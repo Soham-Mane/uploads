@@ -38,7 +38,7 @@ const DisplayTournamentH = () => {
   };
 
   return (
-    <div className="py-6 max-w-full">
+    <div className="py-6 px-3container ">
       <h2 className="text-2xl font-bold mb-4">Select Tournament</h2>
       {error && <p className="text-red-500">{error}</p>}
 
@@ -58,34 +58,52 @@ const DisplayTournamentH = () => {
       </select>
 
       {selectedTournament ? (
-        <div className="mt-6 bg-white  rounded-lg shadow-lg">
-          <table className="w-full border-collapse table-auto overflow-x-auto">
-            <thead>
-              <tr className="bg-[#333333] text-white">
-                <th className="border border-gray-300 p-3 text-left font-semibold">Team</th>
-                <th className="border border-gray-300 p-3 text-left font-semibold">Wins</th>
-                <th className="border border-gray-300 p-3 text-left font-semibold">Losses</th>
-                <th className="border border-gray-300 p-3 text-left font-semibold">Matches</th>
-                <th className="border border-gray-300 p-3 text-left font-semibold">Points</th>
-              </tr>
-            </thead>
-            <tbody>
-              {selectedTournament.teams
-                .sort((a, b) => b.points - a.points)
-                .map((team, index) => (
+        <div className="mt-6 px-4  rounded-lg ">
+          <div className="overflow-auto">
+            <table className="table-auto border-collapse text-[#6C6C6C] w-full">
+              <thead>
+                <tr className="text-xs font-light gap-2">
+                  <th className="py-[10px] px-2 text-start">Team</th>
+                  <th className="py-[10px]">M</th>
+                  <th className="py-[10px]">W</th>
+                  <th className="py-[10px]">L</th>
+                  <th className="py-[10px]">T</th>
+                  <th className="py-[10px]">PT</th>
+                  
+                </tr>
+              </thead>
+              <tbody className="md:text-xs text-[11px] text-center">
+                {selectedTournament.teams.map((team, index) => (
                   <tr
                     key={team.id || team.name}
                     className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-gray-100 transition duration-200`}
                   >
-                    <td className="border border-gray-200 p-3">{team.name}</td>
-                    <td className="border border-gray-200 p-3">{team.wins}</td>
-                    <td className="border border-gray-200 p-3">{team.losses}</td>
-                    <td className="border border-gray-200 p-3">{team.matches}</td>
-                    <td className="border border-gray-200 p-3 font-semibold text-[#333333]">{team.points}</td>
+                    <td className="pr-1 py-[10px]">
+                      <div className="flex items-center">
+                        <img
+                          src={team.logo || 'default-logo.png'} // Replace with your default logo path if no logo is available
+                          alt={`${team.name} logo`}
+                          className="m-1 rounded-full h-[30px] w-[30px]"
+                        />
+                        <div className="flex flex-col text-start">
+                          <span className="md:min-h-4 min-h-[11px] min-w-12 text-[#000000] text-xs font-semibold">
+                            {team.shortName || team.name}
+                          </span>
+                          <span className="text-[8px] w-[65%] font-semibold text-wrap min-h-2  min-w-24">{team.fullName || ''}</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-2 py-[10px]">{team.matches || 0}</td>
+                    <td className="px-2 py-[10px]">{team.wins || 0}</td>
+                    <td className="px-2 py-[10px]">{team.losses || 0}</td>
+                    <td className="px-2 py-[10px]">{team.ties || 0}</td>
+                    <td className="px-2 py-[10px]">{team.points || 0}</td>
+                    
                   </tr>
                 ))}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
       ) : (
         <p>Please select a tournament to view its details.</p>
@@ -95,3 +113,4 @@ const DisplayTournamentH = () => {
 };
 
 export default DisplayTournamentH;
+
