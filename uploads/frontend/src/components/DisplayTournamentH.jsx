@@ -9,7 +9,7 @@ const DisplayTournamentH = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const res = await axios.get('https://uploads-backend.onrender.com/api/tournaments');
+        const res = await axios.get('http://uploads-backend.onrender.com/api/tournaments');
         setTournaments(res.data);
         setError(null);
 
@@ -80,11 +80,11 @@ const DisplayTournamentH = () => {
                   >
                     <td className="pr-1 py-[10px]">
                       <div className="flex items-center">
-                        <img
-                          src={team.logo || 'default-logo.png'} // Replace with your default logo path if no logo is available
-                          alt={`${team.name} logo`}
-                          className="m-1 rounded-full h-[30px] w-[30px]"
-                        />
+                      <img
+                                src={team.image ? `http://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
+                                alt={`${team.name} logo`}
+                                className="m-1 rounded-full h-[30px] w-[30px]"
+                              />
                         <div className="flex flex-col text-start">
                           <span className="md:min-h-4 min-h-[11px] min-w-12 text-[#000000] text-xs font-semibold">
                             {team.shortName || team.name}
