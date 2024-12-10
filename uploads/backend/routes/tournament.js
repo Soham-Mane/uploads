@@ -40,15 +40,35 @@ router.post('/tournaments', upload.single('image'), async (req, res) => {
 });
 
 // Add teams to a tournament
-router.post('/tournaments/:id/teams', async (req, res) => {
+const teamStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/teams/'); // Specify directory for team images
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname); // Unique filename
+  },
+});
+
+const teamUpload = multer({ storage: teamStorage });
+
+// Add teams to a tournament with image upload
+router.post('/tournaments/:id/teams', teamUpload.single('image'), async (req, res) => {
   const { name, wins, losses, matches, points } = req.body;
+
   try {
     const tournament = await Tournament.findById(req.params.id);
     if (!tournament) {
       return res.status(404).json({ message: 'Tournament not found' });
     }
 
-    const newTeam = { name, wins, losses, matches, points };
+    const newTeam = {
+      name,
+      wins,
+      losses,
+      matches,
+      points,
+      image: req.file ? req.file.path : null, // Save image path if available
+    };
     tournament.teams.push(newTeam);
     await tournament.save();
 
@@ -69,3 +89,4 @@ router.get('/tournaments', async (req, res) => {
 });
 
 module.exports = router;
+
