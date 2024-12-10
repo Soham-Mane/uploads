@@ -6,6 +6,7 @@ const teamSchema = new mongoose.Schema({
   losses: Number,
   matches: Number,
   points: Number,
+  image: String,
 });
 
 const tournamentSchema = new mongoose.Schema({
