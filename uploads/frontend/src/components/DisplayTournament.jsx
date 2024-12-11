@@ -85,7 +85,7 @@ const DisplayTournament = () => {
                             <div className="flex items-center">
                               {/* Team Image */}
                               <img
-                                src={team.image ? `http://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
+                                src={team.image ? `https://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
                                 alt={`${team.name} logo`}
                                 className="m-1 rounded-full h-[30px] w-[30px]"
                               />
