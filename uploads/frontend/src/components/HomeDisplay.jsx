@@ -54,42 +54,6 @@ const HomeDisplay = () => {
         }
 
         return filteredBlogs.map((blog) => (
-//             <div
-//                 className="shadow-md md:w-11/12 w-full h-60 rounded-lg mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer "
-//                 key={blog._id}
-//                 onClick={() => handleBlogClick(blog._id)}
-//             >
-//                 <div className="w-full h-2/3 bg-gray-300 rounded-md">
-//                     {blog.imagePath && (
-//                         <img
-//                             src={`https://uploads-backend.onrender.com/${blog.imagePath}`}
-//                             alt={blog.title}
-//                             className="w-full h-full object-cover"
-//                         />
-//                     )}
-//                 </div>
-       
-//                 <div className="h-1/3 overflow-hidden">
-//     <h3 className="text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis">
-//         {blog.title}
-//     </h3>
-//     <p className=" text-xs mt-2 truncate">
-//         Rahul Mishra
-//         <span className="ml-2">
-//             {`${new Date(blog.createdAt).toLocaleDateString('en-GB', {
-//                 day: '2-digit',
-//                 month: 'short',
-//                 year: 'numeric',
-//             })} • ${new Date(blog.createdAt).toLocaleTimeString('en-US', {
-//                 hour: 'numeric',
-//                 minute: 'numeric',
-//                 hour12: true,
-//             })}`}
-//         </span>
-//     </p>
-// </div>
-
-//             </div>
 <div
 className=" w-11/12 gap-4 h-72 rounded-lg mb-3 flex flex-col space-x-4 transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl cursor-pointer"
 key={blog._id}
@@ -136,27 +100,27 @@ onClick={() => handleBlogClick(blog._id)}
                 
                
             
-            <div className="flex space-x-4 mb-4 border-b">
+            <div className=" flex  mb-4 border border-black border text-xl">
                 <button
-                    className={`py-2 px-4 ${activeTab === 'articles' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'articles' ? 'text-white bg-blue-600  border-blue-600 font-bold ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('articles')}
                 >
                     Articles
                 </button>
                 <button
-                    className={`py-2 px-4 ${activeTab === 'ipl2025' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'ipl2025' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('ipl2025')}
                 >
                     IPL 2025
                 </button>
                 <button
-                    className={`py-2 px-4 ${activeTab === 'Top Story' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'Top Story' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('Top Story')}
                 >
                     Top Story
                 </button>
                 <button
-                    className={`py-2 px-4 ${activeTab === 'wtc2025' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'wtc2025' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('wtc2025')}
                 >
                     WTC 2025
