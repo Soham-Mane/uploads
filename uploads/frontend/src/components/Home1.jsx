@@ -8,7 +8,7 @@ import LatestNews from './LatestNews';
 import TopStory from './TopStory';
 import DisplayTournament from './DisplayTournament';
 import DisplayTournamentH from './DisplayTournamentH';
-import LatestNews1 from './CricketNews';
+import CricketNews from './CricketNews';
 import TrendingNews from './TrendingNews';
 import Foot from './Foot';
 const Home1 = () => {
@@ -54,7 +54,7 @@ const handleBlogClick = (blogId) => {
           </div>
         
       </div>
-      <LatestNews1/>
+      <CricketNews/>
 
       {/* <div className='w-full h-fit flex flex-col md:flex-row'>
           <div className='md:w-3/4 none'>
