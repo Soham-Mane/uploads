@@ -86,7 +86,7 @@ const handleBlogClick = (blogId) => {
     </div>
 
     {/* Footer */}
-    <Foot/>
+   
   </div>
   )
 }
