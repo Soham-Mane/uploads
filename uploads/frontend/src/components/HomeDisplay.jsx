@@ -100,30 +100,30 @@ onClick={() => handleBlogClick(blog._id)}
                 
                
             
-            <div className=" flex  mb-4 border border-black border text-xl">
+            <div className=" flex  mb-4 border border-black border text-xl font-bold">
                 <button
-                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'articles' ? 'text-white bg-blue-600  border-blue-600 font-bold ' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'articles' ? 'text-white bg-blue-600  border-blue-600  ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('articles')}
                 >
                     Articles
                 </button>
                 <button
-                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'ipl2025' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'ipl2025' ? 'text-white bg-blue-600 border-blue-600 ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('ipl2025')}
                 >
-                    IPL 2025
+                    IPL 
                 </button>
                 <button
-                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'Top Story' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'Top Story' ? 'text-white bg-blue-600 border-blue-600  ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('Top Story')}
                 >
                     Top Story
                 </button>
                 <button
-                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'wtc2025' ? 'text-white bg-blue-600 border-blue-600 font-bold ' : 'text-gray-600'}`}
+                    className={`border border-black flex-1 py-2 px-4 ${activeTab === 'wtc2025' ? 'text-white bg-blue-600 border-blue-600  ' : 'text-gray-600'}`}
                     onClick={() => setActiveTab('wtc2025')}
                 >
-                    WTC 2025
+                    WTC 
                 </button>
             </div>
 
