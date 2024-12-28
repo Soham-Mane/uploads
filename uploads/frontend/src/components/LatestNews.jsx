@@ -101,9 +101,7 @@ const LatestNews = () => {
             <DisplayTournamentH/>
                 </div>
             </div>
-            <div>
-                <TopStory/>
-            </div>
+            
        
         </div>
     );
