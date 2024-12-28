@@ -136,9 +136,7 @@ onClick={() => handleBlogClick(blog._id)}
                 <RankingHPage/>
             </div>
                </div> 
-            <div>
-                <LatestNews/>
-            </div>
+            
 
             {/* Load More Button */}
        
