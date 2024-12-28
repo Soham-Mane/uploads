@@ -54,7 +54,15 @@ const handleBlogClick = (blogId) => {
           </div>
         
       </div>
-      <CricketNews/>
+      <div>
+                <LatestNews/>
+            </div>
+            <div>
+                <TopStory/>
+            </div>
+            <div>
+            <CricketNews/>
+            </div>
 
       {/* <div className='w-full h-fit flex flex-col md:flex-row'>
           <div className='md:w-3/4 none'>
