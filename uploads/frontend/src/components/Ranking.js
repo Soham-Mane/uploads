@@ -59,8 +59,8 @@ const RankingTable = ({ format, category }) => {
 };
 
 const RankingsPage = () => {
-  const [category, setCategory] = useState("Batting");
-  const [format, setFormat] = useState("Test");
+  const [category, setCategory] = useState("Team");
+  const [format, setFormat] = useState("T20");
   const navigate = useNavigate();
 
   const categories = ["Team", "Batting", "Bowling", "All-rounder"];
