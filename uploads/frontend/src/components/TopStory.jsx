@@ -49,7 +49,7 @@ const TopStory = () => {
                     )}
                 </div>
                 <div className="absolute bottom-5 left-0 w-full bg-opacity-50 p-2 text-white">
-                    <h3 className="text-lg font-extrabold line-clamp-3">
+                    <h3 className="text-lg font-extrabold line-clamp-3 " style={{ textShadow: '2px 2px 4px black' }}>
                         {blog.title}
                     </h3>
                 </div>
