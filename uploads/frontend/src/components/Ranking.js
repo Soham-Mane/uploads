@@ -1,43 +1,22 @@
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-const PlayerRanking = ({ player, index }) => (
-  <div className="grid grid-cols-4 items-center py-2 border-b">
-    <div className="col-span-1 flex items-center justify-center">
-      <span className="text-lg font-semibold">{index + 1}</span>
-      {player.movement && (
-        <span
-          className={`ml-2 text-xs font-bold ${
-            player.movement.startsWith("+") ? "text-green-500" : "text-red-500"
-          }`}
-        >
-          {player.movement}
-        </span>
-      )}
-    </div>
-    <div className="col-span-2 flex items-center">
-      <div className="ml-3">
-        <p className="text-sm font-semibold">{player.playerName}</p>
-        <p className="text-xs uppercase text-gray-500">{player.countryName}</p>
-      </div>
-    </div>
-    <div className="col-span-1  flex justify-center font-semibold">{player.ranking}</div>
-  </div>
-);
+import { useNavigate } from "react-router-dom";
 
 const TeamRanking = ({ team, index }) => (
-  <div className="grid grid-cols-4 items-center py-2 border-b">
-    <div className="col-span-1 flex items-center">
-      <span className="text-lg font-semibold">{index + 1}</span>
+  <div className=" grid grid-cols-5 items-center py-2 border-b ">
+    <div className= "text-2xl text-purple-600 text-gray-500 font-semibold ml-2">
+      <span>  {index+1}</span>
+    
+
     </div>
-    <div className="col-span-2 flex items-center">
-      <div className="ml-3">
-        <p className="text-sm font-semibold">{team.playerName}</p>
-      </div>
+    <div className="col-span-3 flex flex-col items-start">
+      <p className="text-base font-semibold">{team.playerName}</p>
+      <p className="text-sm text-gray-500">{team.countryName}</p>
     </div>
-    <div className="col-span-1  font-semibold flex ">{team.ranking}</div>
+    <div className="text-lg text-gray-500 font-semibold text-center ">{team.ranking}</div>
   </div>
-);
+)
 
 const RankingTable = ({ format, category }) => {
   const [rankings, setRankings] = useState([]);
@@ -62,22 +41,19 @@ const RankingTable = ({ format, category }) => {
   }, [category, format]);
 
   if (loading) {
-    return <div className="text-center">Loading...</div>;
+    return <div className="text-center mt-6">Loading...</div>;
   }
 
   return (
-    <div className="mt-4">
-      <div className="grid grid-cols-4 items-center py-2 font-bold border-b">
-        <div className="col-span-1 flex justify-center">Position</div>
-        <div className="col-span-2">Player Name</div>
-        <div className="col-span-1 flex justify-center">Ranking</div>
+    <div>
+      <div className=" grid grid-cols-3 items-center py-1 font-semibold border-b">
+        <span className="text-left text-base text-gray-500">Rank</span>
+        <div className="text-left text-base text-gray-500">Player</div>
+        <div className="text-center text-base text-gray-500">Rating</div>
       </div>
-      {rankings.slice(0, 10).map((player, index) => { // Limit to top 10 players
-        if (category === "Teams") {
-          return <TeamRanking key={player.position} team={player} index={index} />;
-        }
-        return <PlayerRanking key={player.position} player={player} index={index} />;
-      })}
+      {rankings.slice(0, 5).map((team, index) => (
+        <TeamRanking key={team.position} team={team} index={index} />
+      ))}
     </div>
   );
 };
@@ -85,24 +61,47 @@ const RankingTable = ({ format, category }) => {
 const RankingsPage = () => {
   const [category, setCategory] = useState("Batting");
   const [format, setFormat] = useState("Test");
+  const navigate = useNavigate();
 
-  const categories = ["Batting", "Bowling", "All-rounder", "Team"];
-  const formats = ["Test", "ODI", "T20"];
+  const categories = ["Team", "Batting", "Bowling", "All-rounder"];
+  const formats = ["T20", "ODI", "Test"];
 
   return (
-    <div className="max-w-4xl mx-auto mt-8  shadow-md rounded-lg p-4">
-      <h1 className="text-2xl font-bold text-center">
-        ICC Cricket Rankings - Men's {category}
+    <div className="max-w-4xl mx-auto  p-3 bg-white shadow-lg rounded-lg">
+      <h1 className="text-2xl font-bold text-center mb-6 flex items-center justify-center">
+      <span role="img" aria-label="smiling with stars in eyes">
+  🤩
+</span>
+        <span className="ml-2">TOP RANKINGS</span>
       </h1>
+<div className="flex justify-center mb-2">
+  <div className="flex items-center border border-gray-300 rounded-full overflow-hidden">
+    {formats.map((fmt, idx) => (
+      <button
+        key={fmt}
+        onClick={() => setFormat(fmt)}
+        className={`px-2 py-1 text-sm font-medium transition-colors duration-300 ${
+          format === fmt
+            ? "bg-blue-600 text-white"
+            : "bg-white text-gray-600"
+        } ${
+          idx === 0 ? "rounded-l-full" : idx === formats.length - 1 ? "rounded-r-full" : ""
+        }`}
+      >
+        {fmt}
+      </button>
+    ))}
+  </div>
+</div>
 
-      <div className="flex justify-center mt-4 border-b">
+      <div className="flex justify-center gap-2 mb-2 border-b">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`mx-4 py-2 text-sm font-semibold ${
+            className={`py-2 px-2 text-sm font-semibold ${
               category === cat
-                ? "text-green-600 border-b-2 border-green-600"
+                ? "text-blue-600 border-b-2 border-blue-600"
                 : "text-gray-500"
             }`}
           >
@@ -111,23 +110,16 @@ const RankingsPage = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-4 border-b">
-        {formats.map((fmt) => (
-          <button
-            key={fmt}
-            onClick={() => setFormat(fmt)}
-            className={`mx-4 py-2 text-sm font-semibold ${
-              format === fmt
-                ? "text-green-600 border-b-2 border-green-600"
-                : "text-gray-500"
-            }`}
-          >
-            {fmt}
-          </button>
-        ))}
-      </div>
-
       <RankingTable format={format} category={category} />
+
+      <div className="flex justify-center mt-2">
+        <button
+          onClick={() => navigate("/ranking")}
+          className="text-blue-600 font-medium px-2 py-2 rounded-lg hover:bg-blue-100"
+        >
+          Load More
+        </button>
+      </div>
     </div>
   );
 };
