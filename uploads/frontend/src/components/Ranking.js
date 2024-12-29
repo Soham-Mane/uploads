@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const TeamRanking = ({ team, index }) => (
   <div className=" grid grid-cols-5 items-center py-2 border-b ">
-    <div className= "text-2xl text-purple-600 text-gray-500 font-semibold ml-2">
+    <div className= "text-2xl text-purple-600 text-gray-500 font-extrabold ml-2">
       <span>  {index+1}</span>
     
 
