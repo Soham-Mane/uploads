@@ -1,11 +1,10 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const TeamRanking = ({ team, index }) => (
   <div className=" grid grid-cols-5 items-center py-2 border-b ">
-    <div className= "text-2xl text-purple-600 text-gray-500 font-extrabold ml-2">
+    <div className= "text-2xl text-purple-600 text-gray-500 font-semibold ml-2">
       <span>  {index+1}</span>
     
 
@@ -51,7 +50,7 @@ const RankingTable = ({ format, category }) => {
         <div className="text-left text-base text-gray-500">Player</div>
         <div className="text-center text-base text-gray-500">Rating</div>
       </div>
-      {rankings.slice(0, 5).map((team, index) => (
+      {rankings.slice(0, 10).map((team, index) => (
         <TeamRanking key={team.position} team={team} index={index} />
       ))}
     </div>
@@ -59,15 +58,15 @@ const RankingTable = ({ format, category }) => {
 };
 
 const RankingsPage = () => {
-  const [category, setCategory] = useState("Team");
-  const [format, setFormat] = useState("T20");
+  const [category, setCategory] = useState("Batting");
+  const [format, setFormat] = useState("Test");
   const navigate = useNavigate();
 
   const categories = ["Team", "Batting", "Bowling", "All-rounder"];
   const formats = ["T20", "ODI", "Test"];
 
   return (
-    <div className="max-w-4xl mx-auto  p-3  shadow-lg rounded-lg">
+    <div className="max-w-4xl mx-auto  p-3 shadow-lg rounded-lg">
       <h1 className="text-2xl font-bold text-center mb-6 flex items-center justify-center">
       <span role="img" aria-label="smiling with stars in eyes">
   🤩
@@ -112,14 +111,14 @@ const RankingsPage = () => {
 
       <RankingTable format={format} category={category} />
 
-      <div className="flex justify-center mt-2">
+      {/* <div className="flex justify-center mt-2">
         <button
           onClick={() => navigate("/ranking")}
           className="text-blue-600 font-medium px-2 py-2 rounded-lg hover:bg-blue-100"
         >
           Load More
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
