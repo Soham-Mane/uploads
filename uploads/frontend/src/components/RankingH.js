@@ -62,7 +62,7 @@ const RankingsHPage = () => {
   const [format, setFormat] = useState("T20");
   const navigate = useNavigate();
 
-  const categories = ["Team", "Batting", "Bowling", "All-Rounder"];
+  const categories = ["Team", "Batting", "Bowling", "All-rounder"];
   const formats = ["T20", "ODI", "Test"];
 
   return (
