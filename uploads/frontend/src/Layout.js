@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import './styles.css';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { IoMdSunny } from "react-icons/io";
 const Layout = () => {
     const [darkMode, setDarkMode] = useState(false);
 
@@ -25,9 +26,9 @@ const Layout = () => {
             <header>
             <button onClick={toggleDarkMode} className="p-2 rounded-full flex items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
                 {darkMode ? (
-                    <FaSun className="text-yellow-400 text-2xl" />
+                    <IoMdSunny className="text-yellow-400 text-2xl" />
                 ) : (
-                    <FaMoon className="text-gray-800 text-2xl" />
+                    <IoMdSunny className="text-gray-800 text-2xl" />
                 )}
             </button>
             </header>
