@@ -26,9 +26,9 @@ const Layout = () => {
             <header>
             <button onClick={toggleDarkMode} className="p-2 rounded-full flex items-center hover:bg-gray-200 dark:hover:bg-gray-600 transition-all">
                 {darkMode ? (
-                    <IoMdSunny className="text-yellow-400 text-2xl" />
+                    <IoMdSunny className="text-yellow-400 text-xl" />
                 ) : (
-                    <IoMdSunny className="text-gray-800 text-2xl" />
+                    <IoMdSunny className="text-gray-800 text-xl" />
                 )}
             </button>
             </header>
