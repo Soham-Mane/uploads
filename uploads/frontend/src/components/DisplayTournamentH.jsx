@@ -38,7 +38,7 @@ const DisplayTournamentH = () => {
   };
 
   return (
-    <div className="py-6 px-3container ">
+    <div className="flex flex-col items-center py-6 px-3 ">
       <h2 className="text-2xl font-bold mb-4 text-center"> 📊 Points Table</h2>
       {error && <p className="text-red-500">{error}</p>}
 
