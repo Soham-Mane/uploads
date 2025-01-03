@@ -1,5 +1,6 @@
 
 
+
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +9,9 @@ import styled from "styled-components";
 import TopStory from './TopStory';
 import Articles from './Articles';
 import IPL2025 from './IPL2025';
+import Topnav from './Topnav';
+import Head from './Head';
+import Foot from './Foot';
 
 const BlogPost = () => {
   const [blogs, setBlogs] = useState([]);
@@ -163,13 +167,16 @@ const BlogPost = () => {
 `;
 
   return (
-    <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
+    <div className="relative w-full h-[500px]  mx-auto bg-cover bg-center">
+    <Topnav/>  
+    <Head />
+    <div className=" container mx-auto max-w-[1140px]  py-2">
       {/* Blog Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
         {/* Main Blog Post */}
         <div className="col-span-2">
           <div className="mb-4">
-            <p className="text-sm text-gray-500">Blog / Web Design</p>
+            <p className="text-sm text-gray-500">Blog </p>
             <h1 className="text-3xl font-bold mb-2">
              {blog.title}
             </h1>
@@ -312,6 +319,8 @@ const BlogPost = () => {
         </div>
       </div>
       <IPL2025/>
+    </div>
+    <Foot/>
     </div>
   );
 };
