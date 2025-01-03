@@ -2,12 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import TrendingNews from './TrendingNews';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import TrendingNews from './TrendingNews';
 import Articles from './Articles';
 import Head from './Head';
 import Foot from './Foot';
 import IPL2025 from './IPL2025';
 import rohit from '../images/rohit';
 import Hero from './Hero';
+import Topnav from './Topnav';
 const NewsSection = () => {
   const [blogs, setBlogs] = useState([]);
   const [visibleCount, setVisibleCount] = useState(4); // State to track visible blog count
@@ -41,13 +46,14 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
 
   return (
    
-      <div className="relative w-full h-[500px] max-w-[1140px] mx-auto bg-cover bg-center">
+      <div className="relative w-full h-[500px]  mx-auto bg-cover bg-center">
+      <Topnav/>  
       <Head />
-      <Hero/>
-    <div className=" container mx-auto  px-4 py-2">
+      
+    <div className=" container mx-auto max-w-[1140px]  py-2">
      
       {/* Latest News Section */}
-    
+      <Hero/>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {/* Latest News */}
         <div className="col-span-2 ">
@@ -127,7 +133,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
       </div>
       <IPL2025/>
     </div>
-    {/* <Foot /> */}
+    <Foot/>
     </div>
     
   );
