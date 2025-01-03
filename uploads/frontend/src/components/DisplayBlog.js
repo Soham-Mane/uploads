@@ -92,7 +92,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
                   <p className=" text-lg">
                     {blog.description}
                   </p>
-                  <p className=" text-xs mt-2">Rahul Mishra
+                  <p className=" text-xs mt-2 text-gray-400 font-medium">Rahul Mishra
                   <br/>
                     {`${new Date(blog.createdAt).toLocaleDateString('en-GB', {
                       day: '2-digit',
