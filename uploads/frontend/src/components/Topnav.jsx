@@ -18,7 +18,7 @@ const Topnav = () => {
   }).format(currentDate);
 
   return (
-    <div className='flex justify-between px-4 bg-slate-50'>
+    <div className='flex justify-between px-4 bg-slate-50 w-full'>
       <div className='flex items-center gap-2 py-1'><div>{formattedDate}</div><div><Layout/></div></div>
       <div className='flex items-center gap-2 py-1'><FaFacebookF /> <FaInstagram /> <FaYoutube />  <FaLinkedinIn /> <FaSquareXTwitter /><FaReddit /><FaTelegram /> <FaWhatsapp /></div>
     </div>
