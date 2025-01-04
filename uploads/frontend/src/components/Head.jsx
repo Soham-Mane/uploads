@@ -11,9 +11,9 @@ const Head = () => {
   };
 
   return (
-       <div className="sticky top-0 z-50 bg-slate-100 ">
+    <div className="sticky top-0 z-50 bg-slate-100 px-6">
     <nav className="">
-  <div className="max-w-[1320px] xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
+  <div className="max-w-full xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
     {/* Logo Section */}
     <div className="flex items-center p-4">
       <a className="flex items-center" href="/">
@@ -26,7 +26,7 @@ const Head = () => {
     </div>
 
     {/* Desktop Links */}
-    <div className="hidden md:flex items-center space-x-10">
+    <div className="hidden md:flex items-center space-x-14">
       <a className="flex items-center text-[#333333] font-medium hover:text-gray-500" href="/">
         <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
         Live Scores
