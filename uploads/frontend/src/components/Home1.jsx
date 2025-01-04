@@ -44,7 +44,7 @@ const handleBlogClick = (blogId) => {
 
       
       {/* Carousel Component */}
-      <Carousel />
+     {/*  <Carousel /> */}
       </div>
       {/* Additional Content */}
     {/* Additional Content */}
