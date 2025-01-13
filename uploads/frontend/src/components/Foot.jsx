@@ -10,7 +10,7 @@ const Foot = () => {
   
     <div>
       
-      <div className="mx-auto pt-8 pb-8 px-4 lg:max-w-6xl lg:px-8">
+      <div className="mx-auto max-w-[1140px] pt-8 pb-8 px-4 lg:max-w-6xl lg:px-8">
         <div className="mt-10 mb-4 gap-y-10 flex flex-wrap justify-between xl:gap-x-8">
           
           <div className="md:mx-0 mx-20">
