@@ -13,7 +13,7 @@ const Head = () => {
   return (
     <div className="sticky top-0 z-50 bg-slate-100 px-6">
     <nav className="">
-  <div className="max-w-full xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
+  <div className="max-w-[1140px] xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
     {/* Logo Section */}
     <div className="flex items-center p-4">
       <a className="flex items-center" href="/">
