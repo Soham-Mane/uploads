@@ -170,7 +170,7 @@ const BlogPost = () => {
     <div className="relative w-full   mx-auto bg-cover bg-center">
     <Topnav/>  
     <Head />
-    <div className=" container mx-auto max-w-[1140px]  py-2">
+    <div className=" container mx-auto max-w-[1140px] px-2 py-2">
       {/* Blog Content */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:p-10">
         {/* Main Blog Post */}
