@@ -42,7 +42,7 @@ const articleBlogs=blogs.filter(blog=>blog.category==='Articles')
 
   return (
    
-      <div className="relative w-full h-[500px]  mx-auto bg-cover bg-center">
+      <div className="relative w-full   mx-auto bg-cover bg-center">
       <Topnav/>  
       <Head />
       
