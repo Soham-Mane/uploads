@@ -38,17 +38,17 @@ const DisplayTournamentH = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-6 px-1 ">
-      <h2 className="text-2xl font-bold mb-4 text-center"> 📊 Points Table</h2>
+    <div className="flex flex-col items-center py-6  ">
+      <h2 className="text-2xl font-bold mb-4 text-center">📊 Points Table</h2>
       {error && <p className="text-red-500">{error}</p>}
 
       <select
         onChange={handleTournamentSelect}
-        className="w-full p-2 border border-gray-300 rounded mb-4"
+        className="w-full py-2 border border-gray-300 rounded mb-4"
         value={selectedTournament ? selectedTournament.name : ''}
       >
         <option value="" disabled>
-          -- Select Tournament --
+          Points Table 📊
         </option>
         {tournaments.map((tournament) => (
           <option key={tournament.name} value={tournament.name}>
@@ -58,7 +58,7 @@ const DisplayTournamentH = () => {
       </select>
 
       {selectedTournament ? (
-        <div className="mt-6 px-4  rounded-lg ">
+        <div className="mt-6   rounded-lg ">
           <div className="overflow-auto">
             <table className="table-auto border-collapse text-[#6C6C6C] w-full">
               <thead>
@@ -69,7 +69,6 @@ const DisplayTournamentH = () => {
                   <th className="py-[10px]">L</th>
                   <th className="py-[10px]">T</th>
                   <th className="py-[10px]">PT</th>
-                  
                 </tr>
               </thead>
               <tbody className="md:text-xs text-[11px] text-center">
@@ -80,11 +79,11 @@ const DisplayTournamentH = () => {
                   >
                     <td className="pr-1 py-[10px]">
                       <div className="flex items-center">
-                      <img
-                                src={team.image ? `https://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
-                                alt={`${team.name} logo`}
-                                className="m-1 rounded-full h-[30px] w-[30px]"
-                              />
+                        <img
+                          src={team.image ? `https://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
+                          alt={`${team.name} logo`}
+                          className="m-1 rounded-full h-[30px] w-[30px]"
+                        />
                         <div className="flex flex-col text-start">
                           <span className="md:min-h-4 min-h-[11px] min-w-12 text-[#000000] text-xs font-semibold">
                             {team.shortName || team.name}
@@ -98,7 +97,6 @@ const DisplayTournamentH = () => {
                     <td className="px-2 py-[10px]">{team.losses || 0}</td>
                     <td className="px-2 py-[10px]">{team.ties || 0}</td>
                     <td className="px-2 py-[10px]">{team.points || 0}</td>
-                    
                   </tr>
                 ))}
               </tbody>
