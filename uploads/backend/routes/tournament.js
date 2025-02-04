@@ -5,7 +5,8 @@ const multer = require('multer');
 const path = require('path');
 const app = express();
 // Set up multer storage for file uploads
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads/teams', express.static(path.join(__dirname, 'uploads/teams')));
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'uploads/'); // Specify the uploads directory
