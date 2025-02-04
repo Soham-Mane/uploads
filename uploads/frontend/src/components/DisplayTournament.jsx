@@ -9,7 +9,7 @@ const DisplayTournament = () => {
   useEffect(() => {
     const fetchTournaments = async () => {
       try {
-        const res = await axios.get('https://uploads-backend.onrender.com/api/tournaments');
+        const res = await axios.get('http://localhost:5000/api/tournaments');
         setTournaments(res.data);
         setError(null);
       } catch (err) {
@@ -39,7 +39,7 @@ const DisplayTournament = () => {
             >
               <div className="flex items-center">
                 <img
-                  src={`https://uploads-backend.onrender.com/${tournament.image}`}
+                  src={`http://localhost:5000/${tournament.image}`}
                   alt={tournament.name}
                   className="h-12 w-12 rounded-lg mr-4 object-cover"
                 />
@@ -85,7 +85,7 @@ const DisplayTournament = () => {
                             <div className="flex items-center">
                               {/* Team Image */}
                               <img
-                                src={team.image ? `https://uploads-backend.onrender.com/${team.image}` : 'default-logo.png'}
+                                src={team.image ? `http://localhost:5000/${team.image}` : 'default-logo.png'}
                                 alt={`${team.name} logo`}
                                 className="m-1 rounded-full h-[30px] w-[30px]"
                               />
@@ -116,3 +116,4 @@ const DisplayTournament = () => {
 };
 
 export default DisplayTournament;
+
