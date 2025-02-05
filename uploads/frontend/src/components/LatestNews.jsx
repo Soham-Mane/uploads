@@ -79,7 +79,7 @@ const LatestNews = () => {
         <div className="container mx-auto p-2 ">
             {/* Content Grid */}
             <div className="flex md:flex-row flex-col">
-            <div>
+            <div className='flex-1'>
             
             <div className='flex flex-row items-center justify-center gap-4 p-4'>
             <h2 className='text-4xl font-bold'>Latest News</h2>
