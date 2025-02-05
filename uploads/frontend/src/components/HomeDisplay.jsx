@@ -96,7 +96,7 @@ onClick={() => handleBlogClick(blog._id)}
         <div className="container mx-auto p-4">
             {/* Tab Header */}
             <div className="flex md:flex-row flex-col">
-                <div className="yes">
+                <div className="flex-1">
                 
                
             
