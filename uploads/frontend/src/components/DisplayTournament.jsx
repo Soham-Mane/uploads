@@ -78,7 +78,7 @@ const DisplayTournament = () => {
                         <tr
                           key={team.id || team.name}
                           className={`${
-                            index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+                            index % 2 === 0 ? '' : ''
                           } hover:bg-gray-100 transition duration-200 text-lg`}
                         >
                           <td className="pr-1 py-[10px] w-[70%]">
