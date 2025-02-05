@@ -1,13 +1,15 @@
-/* styles.css */
-
 :root {
     --bg-color: #ffffff;
-    --text-color: #000000;
+    --text-color: #333333;
+    --accent-color: #2196F3;
+    --highlight-color: #F5F5F5;
 }
 
 .dark-mode {
-    --bg-color: #333333;
-    --text-color: #ffffff;
+    --bg-color: #121212;
+    --text-color: #E0E0E0;
+    --accent-color: #2196F3;
+    --highlight-color: #424242;
 }
 
 body {
@@ -16,13 +18,39 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+a, .btn {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 0.5em 1em;
+    margin: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
 .toggle-btn {
     cursor: pointer;
     padding: 0.5em 1em;
     margin: 1em;
     border: none;
     border-radius: 5px;
-    background-color: var(--bg-color);
+    background-color: var(--highlight-color);
     color: var(--text-color);
     border: 1px solid var(--text-color);
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff;
 }
