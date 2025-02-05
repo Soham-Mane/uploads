@@ -82,7 +82,7 @@ const RankingsPage = () => {
         className={`px-2 py-1 text-sm font-medium transition-colors duration-300 ${
           format === fmt
             ? "bg-blue-600 text-white"
-            : "bg-white text-gray-600"
+            : "bg-[var(--bg-color)] text-gray-600"
         } ${
           idx === 0 ? "rounded-l-full" : idx === formats.length - 1 ? "rounded-r-full" : ""
         }`}
