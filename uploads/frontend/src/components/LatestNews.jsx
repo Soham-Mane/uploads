@@ -97,9 +97,11 @@ const LatestNews = () => {
                 {renderContent()}
             </div>
                  </div>
-            <div>
-            <DisplayTournamentH/>
-                </div>
+            <div className="flex flex-col  w-full md:w-1/4">
+          <div className="w-full">
+            <DisplayTournamentH />
+          </div>
+        </div>
             </div>
             
        
