@@ -11,7 +11,7 @@ const Head = () => {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-slate-100 px-6">
+    <div className="sticky top-0 z-50 bg-[var(--bg-color)] px-6">
     <nav className="">
   <div className="max-w-[1140px] xl:mx-auto flex justify-between items-center h-16 px-4 md:px-0">
     {/* Logo Section */}
@@ -27,18 +27,18 @@ const Head = () => {
 
     {/* Desktop Links */}
     <div className="hidden md:flex items-center space-x-14">
-      <a className="flex items-center text-[#333333] font-medium hover:text-gray-500" href="/">
+      <a className="flex items-center text-[var(--text-color)] font-medium hover:text-gray-500" href="/">
         <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
         Live Scores
       </a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/schedule">Schedule</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/news">Cricket News</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/series">Series</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/ranking">Ranking</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/table">Points Table</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/teams">Teams</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500" href="/wtc">WTC</a>
-      <a className="text-[#333333] font-medium hover:text-gray-500 flex items-center gap-1" href="/">
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/schedule">Schedule</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/news">Cricket News</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/series">Series</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/ranking">Ranking</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/table">Points Table</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/teams">Teams</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500" href="/wtc">WTC</a>
+      <a className="text-[var(--text-color)] font-medium hover:text-gray-500 flex items-center gap-1" href="/">
         More
         {/* <svg
           stroke="currentColor"
@@ -64,7 +64,7 @@ const Head = () => {
 
     {/* Hamburger Icon for mobile */}
     <div className="md:hidden">
-      <button onClick={toggleMenu} className="text-[#333333] focus:outline-none">
+      <button onClick={toggleMenu} className="text-[var(--text-color)] focus:outline-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -85,18 +85,18 @@ const Head = () => {
   {/* Mobile Menu */}
   {isOpen && (
     <div className="md:hidden bg-[#F5F5F5]">
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/">
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/">
         <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
         Live Scores
       </a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/schedule">Schedule</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/news">Cricket News</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/series">Series</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/ranking">Ranking</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/table">Points Table</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/teams">Teams</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200" href="/wtc">WTC</a>
-      <a className="block py-2 px-4 text-[#333333] hover:bg-gray-200 flex items-center gap-1" href="/">
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/schedule">Schedule</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/news">Cricket News</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/series">Series</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/ranking">Ranking</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/table">Points Table</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/teams">Teams</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200" href="/wtc">WTC</a>
+      <a className="block py-2 px-4 text-[var(--text-color)] hover:bg-gray-200 flex items-center gap-1" href="/">
         More
         <svg
           stroke="currentColor"
