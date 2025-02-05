@@ -196,7 +196,7 @@ const BlogPost = () => {
         <img src={`https://uploads-backend.onrender.com/${blog.imagePath}`} alt={blog.title} style={imageStyle} />
       )}
       <br />
-          <p className="text-lg text-gray-800 mb-6">
+          <p className="text-lg  mb-6">
            {blog.description}
           </p>
           <div className='mb-12'>
