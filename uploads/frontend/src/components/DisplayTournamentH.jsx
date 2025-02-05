@@ -44,7 +44,7 @@ const DisplayTournamentH = () => {
 
       <select
         onChange={handleTournamentSelect}
-        className="w-full py-2 border border-gray-300 rounded mb-4"
+        className="w-full py-2 border bg-[var(--bg-color)] border-gray-300 rounded mb-4"
         value={selectedTournament ? selectedTournament.name : ''}
       >
         <option value="" disabled>
@@ -75,7 +75,7 @@ const DisplayTournamentH = () => {
                 {selectedTournament.teams.map((team, index) => (
                   <tr
                     key={team.id || team.name}
-                    className={`${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-gray-100 transition duration-200`}
+                    className={`bg-[var(--bg-color)] hover:bg-gray-100 transition duration-200`}
                   >
                     <td className="pr-1 py-[10px]">
                       <div className="flex items-center">
