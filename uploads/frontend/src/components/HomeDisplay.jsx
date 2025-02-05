@@ -132,8 +132,10 @@ onClick={() => handleBlogClick(blog._id)}
                 {renderContent()}
             </div>
                      </div>
-            <div>
+            <div className='flex flex-col  w-full md:w-1/4'>
+            <div className="w-full">
                 <RankingHPage/>
+                </div>
             </div>
                </div> 
             
